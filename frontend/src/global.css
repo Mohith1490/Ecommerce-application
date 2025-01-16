@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities{
+    .auth-container{
+        @apply w-[25em] border p-8 rounded-2xl border-black relative items-center justify-center top-20;
+    }
+    .auth-input{
+        @apply w-[21em] h-10 rounded-xl border-2 p-5  border-black mb-3 ;
+    }
+    .label{
+        @apply text-lg font-bold;
+    }
+    .line{
+        @apply h-[2px] w-[9em] bg-gray-200 rounded-xl my-2 ;
+    }
+    .auth-button{
+        @apply w-[21em] h-10 rounded-xl border-2 border-black relative mt-2 mb-3 ;
+    }
+    .auth-external_button{
+        @apply w-[9em] h-10 rounded-xl border-2 border-black relative ml-5 mt-2;
+    }
+    .navbar-btn{
+        @apply w-[6em] hover:border-2 hover:border-gray-300 font-sans font-medium text-sm rounded-md hover:bg-gray-100 flex justify-center items-center ;
+    }
+    .card{
+        @apply w-[16em] h-[21em] border-2 p-2 rounded-xl grid border-gray-300 bg-gray-100 justify-center items-center relative mt-10 hover:drop-shadow-2xl hover:scale-[1.01] hover:ease-in duration-100;
+    }
+    .quantity-btn{
+        @apply w-8 h-8 rounded-full border-2 border-gray-300 bg-gray-200 hover:bg-gray-400 font-extrabold text-2xl flex justify-center items-center ;
+    }
+    
+}

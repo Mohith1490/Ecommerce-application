@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ItemCardComponent from "./components/ItemCardComponent.tsx";
+import  {products}  from './projects.js'
+import './global.css'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+        <div className="w-full flex justify-center " >
+          <div className="w-[85%] h-full relative top-10 grid grid-cols-4" >
+            {
+              products.map((product) => {
+                return <ItemCardComponent key={product.id} {...product} />
+              })
+            }
+          </div>
+        </div>
+    </>
   );
 }
 
