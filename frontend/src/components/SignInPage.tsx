@@ -1,6 +1,7 @@
 "use client"
 import React from 'react'
 import '../global.css'
+import { GoogleLogin } from '@react-oauth/google'
 
 const SignInPage = () => {
     function handleFormDetails(formData: any) {
@@ -23,8 +24,15 @@ const SignInPage = () => {
                         <p>or</p>
                         <hr className='line' />
                     </div>
-                    <button className='auth-external_button bg-gray-100 font-bold'  >Github</button>
-                    <button className='auth-external_button bg-gray-100 font-bold' >Google</button>
+                    <GoogleLogin
+                        onSuccess={credentialResponse => {
+                            console.log(credentialResponse);
+                        }}
+                        onError={() => {
+                            console.log('Login Failed');
+                        }}
+                        useOneTap
+                    />
                 </span>
             </div>
         </>

@@ -35,7 +35,7 @@ const TotalItemPrice = () => {
     <div className='w-[20em] h-[20em] border-2 border-gray-400 rounded-3xl p-5 top-20 z-10 float-right sticky right-20' >
       <h1 className='font-semibold text-xl mt-6' >Total items: <h1 className='relative float-right' >{totalItem}</h1> </h1>
       <hr className='border' />
-      <h1 className='font-semibold text-xl mt-10' >Shipping fee: <h1 className='relative float-right text-green-600' >Free</h1>  </h1>
+      <h1 className='font-semibold text-xl mt-10' >Shipping fee: <h1 className='relative float-right text-green-600' >{totalPrice > 200 ? <p>Free <sub className='font-bold text-sm text-black'><s>$22</s></sub></p> : "$22" }</h1>  </h1>
       {/* <hr className='border' /> */}
       {/* <div className='grid grid-flow-col justify-between items-center mt-7 ' >
         <h1 className='font-semibold text-xl' >Coupons:</h1>
