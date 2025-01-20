@@ -3,6 +3,7 @@ import { RootState } from '../redux/store.ts';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import '../global.css'
+import { CheckoutVerification } from '../lib/signout.ts';
 
 const Cart = () => {
   const selectedItems = useSelector((state: RootState) => state.cart.items);
@@ -46,7 +47,7 @@ const TotalItemPrice = () => {
         <h1 className='font-semibold text-xl' >Total Amount:</h1>
         <p className='font-semibold text-xl' >{totalPrice.toFixed(2)}</p>
       </div>
-      <button className='auth-button !w-[17em] !mt-10 font-bold ml-2 bg-blue-400' >Proceed To Pay</button>
+      <button className='auth-button !w-[17em] !mt-10 font-bold ml-2 bg-blue-400' onClick={CheckoutVerification} >Proceed To Pay</button>
     </div>
   )
 }

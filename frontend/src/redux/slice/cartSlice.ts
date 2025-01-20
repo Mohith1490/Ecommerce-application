@@ -57,13 +57,8 @@ export const cartSlice = createSlice({
       state.totalItems -= existingItem!.quantity;
       state.totalPrice -= existingItem!.price * existingItem!.quantity;
     },
-    couponApplied(state,action){
-      if(action.payload === "MOHITH"){
-        state.totalPrice -= (state.totalItems * 0.1)
-      }
-    }
   }
 })
 
-export const { addToCart, removeFromCart, deleteItem,couponApplied } = cartSlice.actions;
+export const { addToCart, removeFromCart, deleteItem } = cartSlice.actions;
 export default cartSlice.reducer;
